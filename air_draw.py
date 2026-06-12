@@ -38,7 +38,7 @@ def draw_palette(img):
     cv2.putText(img, "E", (len(colors) * 80 + 25, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
-    # 🧼 CLEAR button
+ 
     cv2.rectangle(img, ((len(colors) + 1) * 80, 0),
                   ((len(colors) + 2) * 80, 80), (200, 200, 200), -1)
     cv2.putText(img, "C", ((len(colors) + 1) * 80 + 25, 50),
@@ -62,7 +62,7 @@ while True:
             x = int(handLms.landmark[8].x * w)
             y = int(handLms.landmark[8].y * h)
 
-            # 🎯 TOOL SELECTION
+        
             if y < 80:
                 index = x // 80
 
@@ -75,7 +75,7 @@ while True:
                 elif index == len(colors) + 1:
                     canvas = np.zeros((h, w, 3), dtype=np.uint8)  # 🧼 CLEAR
 
-            # 🖊 DRAWING
+ 
             if prev_x == 0 and prev_y == 0:
                 prev_x, prev_y = x, y
 
