@@ -73,7 +73,7 @@ while True:
                     color = eraser_color
 
                 elif index == len(colors) + 1:
-                    canvas = np.zeros((h, w, 3), dtype=np.uint8)  # 🧼 CLEAR
+                    canvas = np.zeros((h, w, 3), dtype=np.uint8)
 
  
             if prev_x == 0 and prev_y == 0:
